@@ -28,7 +28,8 @@ module.exports = {
     if (context.parameters.options.default) {
       context.print.info(chooseProject[0].default);
       context.print.info(amplifyMeta.video);
-      props = amplifyMeta.video[chooseProject[0].default];
+      props = {resourceName:chooseProject[0].default};
+      context.print.info('props');
       context.print.info(props);
     } else{
       props = await inquirer.prompt(chooseProject);
