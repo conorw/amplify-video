@@ -27,7 +27,7 @@ module.exports = {
     let props;
     if (context.parameters.options.default) {
       context.print.info(amplifyMeta[category]);
-      props = amplifyMeta[category][0];
+      props = amplifyMeta[category][Object.keys(amplifyMeta[category])[0]];
     } else{
       props = await inquirer.prompt(chooseProject);
     }
