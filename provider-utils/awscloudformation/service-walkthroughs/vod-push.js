@@ -159,7 +159,7 @@ async function serviceQuestions(context, options, defaultValuesFilename, resourc
 
       // determine the outputRendition of the template (HLS or DASH)
       const currentTemplate = jobTemplate.JobTemplate;
-
+      const outputRendition = [];
       for (let counter = 0; counter < currentTemplate.Settings.OutputGroups.length; counter++) {
         if (currentTemplate.Settings.OutputGroups[0].OutputGroupSettings.Type.includes('DASH')) {
           outputRendition.push('DASH');
