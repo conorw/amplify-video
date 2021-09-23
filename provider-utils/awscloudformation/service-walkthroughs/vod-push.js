@@ -167,6 +167,7 @@ async function serviceQuestions(context, options, defaultValuesFilename, resourc
           outputRendition.push('HLS');
         }
       }
+      outputRendition.push('CUSTOM');
 
       props.template.type = outputRendition;
     }
